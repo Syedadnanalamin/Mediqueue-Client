@@ -22,7 +22,7 @@ export default function LoginPage() {
         const { data: res, error } = await authClient.signIn.email({
             email: data.email,
             password: data.password,
-            callbackURL: "http://localhost:3000/tutors",
+            callbackURL: "https://mediqueue-client-ass9.vercel.app/tutors",
         });
 
         if (error) {
