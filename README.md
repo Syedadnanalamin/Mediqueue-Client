@@ -1,21 +1,34 @@
 # 📚 MediQueue - Tutor Booking Platform
 
-MediQueue is a modern tutor booking platform that connects students with experienced tutors through a simple and intuitive interface. Students can explore tutors, book learning sessions, and manage their bookings, while tutors can publish and manage their tutorial services from a personalized dashboard.
+MediQueue is a modern full-stack tutor booking platform that connects students with qualified tutors through a seamless and user-friendly experience. Students can explore available tutors, book tutorial sessions, and manage their bookings, while tutors can create, update, and manage their tutorial services from a dedicated dashboard.
 
 ---
 
 # 🌐 Live Demo
 
 * **Live Website:** https://mediqueue-client-ass9.vercel.app/
-
-* **Server Repository:** https://github.com/Syedadnanalamin/Mediqueue-Server.git
+* **Client Repository:** https://github.com/Syedadnanalamin/Mediqueue-Client
+* **Server Repository:** https://github.com/Syedadnanalamin/Mediqueue-Server
 
 ---
 
+# 📸 Project Screenshot
+
+> Add a screenshot of your homepage or dashboard here.
+
+```text
+README/assets/mediqueue-preview.png
+```
+
+```md
+![MediQueue Screenshot](README/assets/mediqueue-preview.png)
+```
+
+---
 
 # 📝 Project Overview
 
-MediQueue simplifies the process of finding and booking tutors online. Students can browse tutor profiles, view available tutorials, and reserve sessions, while tutors can efficiently manage their tutorial offerings, bookings, and personal profiles through a dedicated dashboard.
+MediQueue simplifies the tutor booking process by providing a centralized platform where students can discover tutors, explore tutorial services, and reserve learning sessions. Tutors can efficiently manage their tutorials, monitor bookings, and update their profiles through an intuitive dashboard.
 
 ---
 
@@ -27,7 +40,7 @@ MediQueue simplifies the process of finding and booking tutors online. Students 
 * React Router
 * Tailwind CSS
 * DaisyUI
-* Firebase Authentication
+* Better Auth
 * Axios
 * React Hook Form
 * React Hot Toast
@@ -38,8 +51,7 @@ MediQueue simplifies the process of finding and booking tutors online. Students 
 * Node.js
 * Express.js
 * MongoDB
-* Firebase Admin SDK
-* JSON Web Token (JWT)
+* Better Auth
 * CORS
 * Dotenv
 
@@ -49,43 +61,45 @@ MediQueue simplifies the process of finding and booking tutors online. Students 
 
 ### 🔐 Authentication & Authorization
 
-* Secure Email & Password authentication
-* Google Sign-In
-* JWT-secured private routes
-* Persistent user sessions
+* Secure authentication using Better Auth
+* Email and password sign in
+* Persistent session management
+* Protected private routes
 
 ### 👨‍🏫 Tutor Management
 
 * Browse all available tutors
 * View detailed tutor profiles
-* Add, update, and delete tutorial services
-* Manage tutor information from a personalized dashboard
+* Add new tutorial services
+* Update existing tutorials
+* Delete tutorials
+* Manage tutorials from a personalized dashboard
 
 ### 📅 Session Booking
 
-* Book tutor sessions with a single click
-* View and manage booked sessions
+* Book tutorial sessions
+* View booked tutorials
 * Prevent duplicate bookings
-* Track booking history
+* Manage booking history
 
 ### 👨‍🎓 Student Dashboard
 
-* Browse tutors by category
-* Manage booked tutors
-* View booking details
-* Update personal profile
+* Explore tutors
+* View booked sessions
+* Manage personal bookings
+* Access detailed tutor information
 
 ### 📊 Tutor Dashboard
 
-* Add new tutorials
-* Edit existing tutorials
-* Delete tutorial listings
-* Monitor student bookings
+* Create tutorial listings
+* Edit tutorial information
+* Remove tutorial services
+* Track student bookings
 
 ### 📱 Responsive Design
 
-* Optimized for Mobile
-* Tablet-friendly layout
+* Mobile-friendly interface
+* Tablet optimized
 * Fully responsive desktop experience
 
 ---
@@ -96,7 +110,7 @@ MediQueue simplifies the process of finding and booking tutors online. Students 
 
 * react
 * react-router-dom
-* firebase
+* better-auth
 * axios
 * react-hook-form
 * react-hot-toast
@@ -108,8 +122,7 @@ MediQueue simplifies the process of finding and booking tutors online. Students 
 
 * express
 * mongodb
-* firebase-admin
-* jsonwebtoken
+* better-auth
 * cors
 * dotenv
 * nodemon
@@ -123,30 +136,20 @@ MediQueue simplifies the process of finding and booking tutors online. Students 
 ```env
 PORT=5000
 
-MONGODB_URI=your_mongodb_connection_string
+MONGO_URI=your_mongodb_connection_string
 
-JWT_SECRET=your_jwt_secret
+BETTER_AUTH_SECRET=your_better_auth_secret
 
-FIREBASE_SERVICE_ACCOUNT=your_firebase_service_account
+BETTER_AUTH_URL=http://localhost:5173
 ```
 
 ## Client (.env)
 
 ```env
 VITE_API_URL=http://localhost:5000
-
-VITE_FIREBASE_API_KEY=your_api_key
-
-VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
-
-VITE_FIREBASE_PROJECT_ID=your_project_id
-
-VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-
-VITE_FIREBASE_APP_ID=your_app_id
 ```
+
+> Add any additional environment variables required by your project.
 
 ---
 
@@ -160,54 +163,44 @@ git clone https://github.com/Syedadnanalamin/Mediqueue-Client.git
 git clone https://github.com/Syedadnanalamin/Mediqueue-Server.git
 ```
 
----
-
 ### 2. Install dependencies
 
 #### Client
 
 ```bash
-cd MediQueue_Client
+cd Mediqueue-Client
 npm install
 ```
 
 #### Server
 
 ```bash
-cd MediQueue_Server
+cd Mediqueue-Server
 npm install
 ```
-
----
 
 ### 3. Configure Environment Variables
 
 Create:
 
-* `.env` inside **MediQueue_Server**
-* `.env` inside **MediQueue_Client**
+* `.env` inside **Mediqueue-Server**
+* `.env` (or `.env.local` if applicable) inside **Mediqueue-Client**
 
-Add the required environment variables shown above.
-
----
+Then add the required environment variables shown above.
 
 ### 4. Start the backend
 
 ```bash
-cd MediQueue_Server
+cd Mediqueue-Server
 npm run dev
 ```
-
----
 
 ### 5. Start the frontend
 
 ```bash
-cd MediQueue_Client
+cd Mediqueue-Client
 npm run dev
 ```
-
----
 
 ### 6. Open the application
 
@@ -217,22 +210,22 @@ http://localhost:5173
 
 ---
 
-# 📂 Repository Structure
+# 📂 Project Structure
 
 ```
-MediQueue_Client/
-MediQueue_Server/
+Mediqueue-Client/
+Mediqueue-Server/
 ```
 
 ---
 
 # 📌 Resources
 
-* Live Website
-* Client Repository
-* Server Repository
-* MongoDB Atlas
-* Firebase Console
+* 🌐 Live Website
+* 💻 Client Repository
+* ⚙️ Server Repository
+* 🍃 MongoDB Atlas
+* 🔐 Better Auth Documentation
 
 ---
 
